@@ -1,55 +1,47 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8"/>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			background-color: #000000;
-            overflow: hidden;
-		}
-        #canvasArea {
-            margin-left: auto;
-            margin-right: auto;
-            overflow: hidden;
-        }
+    <meta charset="utf-8" />
+    <title> Game </title>
 
-        
-	</style>
-    <!-- Libs and GDJS core files : -->
-		<script src="code.js"></script>
-
-
-</head>
-<body>
-    <div id="canvasArea"></div>
-
+    <script type="text/javascript" src="./build/phaser.min-3.js"></script>
+    <script type="text/javascript" src="js/assets.js"></script>
+    <script type="text/javascript" src="js/assets2.js"></script>
+    <script type="text/javascript" src="js/assets3.js"></script>
+    <script type="text/javascript" src="js/assets4.js"></script>
+    <script type="text/javascript" src="js/music.js"></script>
+    <script type="text/javascript" src="js/plataforma.js"></script>
+    <script type="text/javascript" src="js/mapa.js"></script>
+    <script type="text/javascript" src="js/sombra.js"></script>
+    <script type="text/javascript" src="js/sol.js"></script>
+    <script type="text/javascript" src="js/finales.js"></script>
+    <script src="./js/parallax/parallax.js"></script>
+    <script type="text/javascript" src="./js/boot.js"></script>
+    <script type="text/javascript" src="./js/load.js"></script>
+    <script type="text/javascript" src="./js/menu.js"></script>
+    <script type="text/javascript" src="./js/play.js"></script>
+    <script type="text/javascript" src="./js/bad.js"></script>
+    <script type="text/javascript" src="./js/good.js"></script>
+    <script type="text/javascript" src="./js/creditos.js"></script>
+    <script type="text/javascript" src="./js/game.js"></script>
     
-	<script>
-
-    (function() {
-        //Initialization
-        gdjs.registerObjects();
-        gdjs.registerBehaviors();
-        gdjs.registerGlobalCallbacks();
-
-        var game = new gdjs.RuntimeGame(gdjs.projectData, {});
-
-        //Create a renderer
-        var canvasArea = document.getElementById("canvasArea");
-        game.createStandardCanvas(canvasArea);
-
-        //Bind keyboards/mouse/touch events
-        game.bindStandardEvents(window, document);
-
-        //Load all assets and start the game
-        game.loadAllAssets(onAssetsLoaded);
-        function onAssetsLoaded() {
-            game.startStandardGameLoop();
+       <style>
+        body {
+            padding: 0px;
+            margin: 0px;
         }
-    })();
+    </style>
+</head>
 
-	</script>
+<body id="back">
+    <div id="gameDiv"> </div>
+    <!--<div id="assets">
+        <audio id="redemptionsong">
+        <source src="assets/music/redemptionmusic.mp3" type="audio/mp3"> 
+        </audio>
+        <script>var redemptiongsong= document.getElementById('redemptionsong');</script>
+    </div>-->
 </body>
+
 </html>
